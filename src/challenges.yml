@@ -1,0 +1,63 @@
+# In each challenge
+# is_timed_score : Whether the score is based on time (e.g. galactic search)
+# predicted_points : a min and max value representing the number of points for a team's skill level
+galactic_search:
+  is_timed_score: True
+  predicted_points:
+    beginner:
+      min: 40
+      max: 60
+    intermediate:
+      min: 20
+      max: 40
+    advanced:
+      min: 8
+      max: 20
+autonav:
+  is_timed_score: True
+  predicted_points:
+    beginner:
+      min: 50
+      max: 180
+    intermediate:
+      min: 25
+      max: 40
+    advanced:
+      min: 10
+      max: 25
+hyperdrive:
+  is_timed_score: True
+  predicted_points:
+    beginner:
+      min: 35
+      max: 45
+    intermediate:
+      min: 25
+      max: 35
+    advanced:
+      min: 15
+      max: 25
+interstellar_accuracy:
+  is_timed_score: False
+  predicted_points:
+    beginner:
+      min: 8
+      max: 16
+    intermediate:
+      min: 16
+      max: 24
+    advanced:
+      min: 39
+      max: 45
+power_port:
+  is_timed_score: False
+  predicted_points:
+    beginner:
+      min: 10
+      max: 30
+    intermediate:
+      min: 30
+      max: 45
+    advanced:
+      min: 45
+      max: 60

@@ -1,0 +1,20 @@
+# Stores the different skill levels of teams and what challenges they attempt
+# Comment a challenge out to make the skill level not participate in the challenge
+beginner:
+  - galactic_search
+  - auto_nav
+  - hyperdrive
+  #- interstellar_accuracy
+  #- power_port
+intermediate:
+  - galactic_search
+  - auto_nav
+  - hyperdrive
+  - interstellar_accuracy
+  - power_port
+advanced:
+  - galactic_search
+  - auto_nav
+  - hyperdrive
+  - interstellar_accuracy
+  - power_port
