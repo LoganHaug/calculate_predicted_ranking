@@ -1,24 +1,33 @@
 """Calculates the a robots average ranking in a group"""
 
-import random
 
-import numpy as np
+from enums import TeamLevel, ChallengeType
+from team import Team
+from group import Group
+from SkillChallenge import SkillChallenge
+from random import randint, choice
 import yaml
 
-import SkillChallenge
 
-# Constants
-
-computed_max_score = 150
+with open("src/team_constants.yml", "r") as team_file:
+    team_info = yaml.load(team_file, Loader=yaml.Loader)
 
 
-# Functions:
-# Group min/max comp score
-def get_group_range(num_challenge_participants: int):
-    return (
-        max(computed_max_score - 20 * (num_challenge_participants - 1), 50),
-        computed_max_score,
-    )
+team_levels = [team_level for team_level in TeamLevel]
+team_nums = set()
+while len(team_nums) < 30:
+    team_nums.add(randint(1, 9000))
+team_list = []
+for team in team_nums:
+    team_level = choice(team_levels)
+    team_challenges = []
+    for challenge in ChallengeType:
+        if challenge.name in team_info[team_level.name]:
+            team_challenges.append(SkillChallenge(challenge))
+    team_list.append(Team(team, team_level, team_challenges))
+my_group = Group(team_list)
+my_group._bind_scores()
+print(my_group._get_challenge_computed_range())
 
 
 # Take user input for what they want their robot to be

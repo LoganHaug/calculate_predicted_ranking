@@ -13,12 +13,14 @@ class Team:
         self.team_challenges = team_challenges
         score_dict = {"team_number": self.team_number}
         for challenge in self.team_challenges:
+            # For some reason you cannot assign subdicts that do not exist yet
+            score_dict[challenge.challenge.name] = {}
             score_dict[challenge.challenge.name][
                 "raw_score"
             ] = challenge.calculate_raw_score(self.team_level)
         # Represents the raw scores
-        self.raw_scores = score_dict
+        self.scores = score_dict
 
     def set_raw_scores(self, scores: dict):
         """Sets the scores, for the user defined team / teams"""
-        self.raw_scores = scores
+        self.scores = scores

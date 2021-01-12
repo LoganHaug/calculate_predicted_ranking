@@ -2,19 +2,19 @@
 # Comment a challenge out to make the skill level not participate in the challenge
 beginner:
   - galactic_search
-  - auto_nav
+  - autonav
   - hyperdrive
   #- interstellar_accuracy
   #- power_port
 intermediate:
   - galactic_search
-  - auto_nav
+  - autonav
   - hyperdrive
   - interstellar_accuracy
   - power_port
 advanced:
   - galactic_search
-  - auto_nav
+  - autonav
   - hyperdrive
   - interstellar_accuracy
   - power_port

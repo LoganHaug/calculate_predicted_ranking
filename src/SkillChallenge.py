@@ -4,7 +4,7 @@ import yaml
 
 from enums import ChallengeType, TeamLevel
 
-with open("challenges.yml", "r") as challenge_file:
+with open("src/challenges.yml", "r") as challenge_file:
     challenges = yaml.load(challenge_file, Loader=yaml.Loader)
 
 
